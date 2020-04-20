@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<link href="icon.png" rel="icon" sizes="16x16" type="image/gif">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="bubbel.css" rel="stylesheet">
+<title>DIGITAL WATCH</title>
+</head>
+
+<body onload="startTime()" style="background-image: url('bg3.jpg')">
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+<ul class="bubbles">
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+<div class="text-center" style="font-size: 30px; color: white; padding-top: 50px">
+	We Design a Digital Watch using HTML,CSS &amp; JAVA Script.</div>
+<div>
+	<div style="padding-left: 450px; padding-right: 500px; padding-top: 180px; padding-bottom: 0px;">
+		<div id="txt" class="text-center" style="background-image: url('digital_fram.png'); height: 300px; width: 510px; padding-top: 100px; color: white; font-size: 60px">
+		</div>
+	</div>
+</div>
+<footer class=" row">
+	<footer class="row" style="padding-top:20px;">
+<ul class="pager col-xs-12 col-md-12 col-lg-12 text-right">
+			<li><a href="index.html">Back</a></li><br><hr>
+            <li><a href="">Designed By :- Rahul Sharma & Amit Dagar.</a></li>
+
+		</ul>
+		
+	</footer>
+</footer>
+<embed src="Ticking-clock-sound.mp3" autostart="true">
+</body> 
+
+</html>
